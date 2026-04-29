@@ -55,3 +55,8 @@ Upload the project to GitHub, then import the repo into Vercel.
 ## First SEO page expansion added
 
 This package adds exact-match pages for minute-from-now, 9AM to 5PM hours, 120 minutes to hours, and days until Christmas. The hour-from-now pages already exist in the core dataset.
+
+
+## Next 50 SEO pages added
+
+This package adds 50 additional SEO-targeted pages across minutes-from-now, hour-from-now, minutes-to-hours, and work-hour queries.
