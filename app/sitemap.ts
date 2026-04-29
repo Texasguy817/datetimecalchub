@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { TOOL_PAGES } from "@/data/toolPages";
 import { BLOG_POSTS } from "@/data/blogPosts";
 
-const SITE_URL = "https://datetimecalchub.com";
+const SITE_URL = "https://timecalchub.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

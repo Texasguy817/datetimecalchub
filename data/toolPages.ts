@@ -483,7 +483,151 @@ function buildDatePagesForYear(year: number) {
   return pages;
 }
 
+
+const FIRST_TEN_SEO_PAGES: ToolPageConfig[] = [
+  {
+    slug: "30-minutes-from-now",
+    title: "30 Minutes From Now",
+    description: "Find out what time it will be 30 minutes from now with this quick calculator.",
+    keyword: "30 minutes from now",
+    category: "time",
+    mode: "futureMinutes",
+    value: 30,
+    related: [
+      { title: "45 Minutes From Now", href: "/45-minutes-from-now" },
+      { title: "Add 30 Minutes to Now", href: "/add-30-minutes-to-now" },
+      { title: "What Time Will It Be in 30 Minutes?", href: "/what-time-will-it-be-in-30-minutes" }
+    ],
+    faq: [
+      { question: "What time is 30 minutes from now?", answer: "This page adds 30 minutes to your current local time." },
+      { question: "Is 30 minutes half an hour?", answer: "Yes. 30 minutes is one half of an hour." },
+      { question: "Can I use this for timers?", answer: "Yes. It is useful for short reminders, breaks, cooking, workouts, and tasks." },
+      { question: "Does the result update?", answer: "Yes. Reload the page to recalculate from the current time." }
+    ],
+  },
+  {
+    slug: "45-minutes-from-now",
+    title: "45 Minutes From Now",
+    description: "Calculate what time it will be 45 minutes from now instantly.",
+    keyword: "45 minutes from now",
+    category: "time",
+    mode: "futureMinutes",
+    value: 45,
+    related: [
+      { title: "30 Minutes From Now", href: "/30-minutes-from-now" },
+      { title: "90 Minutes From Now", href: "/90-minutes-from-now" },
+      { title: "Add 45 Minutes to Now", href: "/add-45-minutes-to-now" }
+    ],
+    faq: [
+      { question: "What time is 45 minutes from now?", answer: "This calculator adds 45 minutes to your current local time." },
+      { question: "How much of an hour is 45 minutes?", answer: "45 minutes is three quarters of an hour." },
+      { question: "What is this useful for?", answer: "It is useful for appointments, breaks, cooking times, reminders, and travel timing." },
+      { question: "Does it work on mobile?", answer: "Yes. It works in normal mobile browsers." }
+    ],
+  },
+  {
+    slug: "90-minutes-from-now",
+    title: "90 Minutes From Now",
+    description: "Find out what time it will be 90 minutes from now with this simple time calculator.",
+    keyword: "90 minutes from now",
+    category: "time",
+    mode: "futureMinutes",
+    value: 90,
+    related: [
+      { title: "45 Minutes From Now", href: "/45-minutes-from-now" },
+      { title: "120 Minutes From Now", href: "/120-minutes-from-now" },
+      { title: "90 Minutes to Hours", href: "/90-minutes-to-hours" }
+    ],
+    faq: [
+      { question: "What time is 90 minutes from now?", answer: "This page adds 90 minutes to the current time." },
+      { question: "How many hours is 90 minutes?", answer: "90 minutes is 1.5 hours." },
+      { question: "Is this useful for sleep cycles?", answer: "Yes. 90 minutes is often used as a common sleep-cycle estimate." },
+      { question: "Does it account for crossing midnight?", answer: "Yes. The result will still calculate correctly if it passes midnight." }
+    ],
+  },
+  {
+    slug: "120-minutes-from-now",
+    title: "120 Minutes From Now",
+    description: "Calculate what time it will be 120 minutes from now.",
+    keyword: "120 minutes from now",
+    category: "time",
+    mode: "futureMinutes",
+    value: 120,
+    related: [
+      { title: "90 Minutes From Now", href: "/90-minutes-from-now" },
+      { title: "120 Minutes to Hours", href: "/120-minutes-to-hours" },
+      { title: "What Time Will It Be in 2 Hours?", href: "/what-time-will-it-be-in-2-hours" }
+    ],
+    faq: [
+      { question: "What time is 120 minutes from now?", answer: "This page adds 120 minutes to your current local time." },
+      { question: "How many hours is 120 minutes?", answer: "120 minutes is 2 hours." },
+      { question: "Is this the same as 2 hours from now?", answer: "Yes. 120 minutes from now is the same as 2 hours from now." },
+      { question: "Can I use this for planning?", answer: "Yes. It is useful for reminders, appointments, and travel timing." }
+    ],
+  },
+  {
+    slug: "9am-to-5pm-hours",
+    title: "9AM to 5PM Hours",
+    description: "Calculate how many hours are between 9AM and 5PM, including common break examples.",
+    keyword: "9am to 5pm hours",
+    category: "utility",
+    mode: "workHours",
+    related: [
+      { title: "Work Hours Calculator", href: "/work-hours-calculator" },
+      { title: "Time Duration Calculator", href: "/time-duration-calculator" },
+      { title: "Minutes to Hours Calculator", href: "/minutes-to-hours-calculator" }
+    ],
+    faq: [
+      { question: "How many hours is 9AM to 5PM?", answer: "9AM to 5PM is 8 hours total." },
+      { question: "How many paid hours is 9AM to 5PM with a 1-hour break?", answer: "With a 1-hour unpaid break, 9AM to 5PM is 7 paid hours." },
+      { question: "Is 9AM to 5PM a full workday?", answer: "It is commonly treated as a standard 8-hour workday before unpaid breaks." },
+      { question: "Can this calculator handle other shifts?", answer: "Yes. Use the work hours calculator for custom start times, end times, and breaks." }
+    ],
+  },
+  {
+    slug: "120-minutes-to-hours",
+    title: "120 Minutes to Hours",
+    description: "Convert 120 minutes to hours instantly with this free time conversion page.",
+    keyword: "120 minutes to hours",
+    category: "utility",
+    mode: "minutesToHours",
+    value: 120,
+    related: [
+      { title: "90 Minutes From Now", href: "/90-minutes-from-now" },
+      { title: "120 Minutes From Now", href: "/120-minutes-from-now" },
+      { title: "Minutes to Hours Calculator", href: "/minutes-to-hours-calculator" }
+    ],
+    faq: [
+      { question: "How many hours is 120 minutes?", answer: "120 minutes is 2 hours." },
+      { question: "How do you convert 120 minutes to hours?", answer: "Divide 120 by 60. The result is 2 hours." },
+      { question: "Is 120 minutes the same as 2 hours?", answer: "Yes. 120 minutes equals 2 hours." },
+      { question: "What is this useful for?", answer: "This conversion is useful for timesheets, scheduling, study blocks, and planning." }
+    ],
+  },
+  {
+    slug: "days-until-christmas",
+    title: "Days Until Christmas",
+    description: "See how many days are left until Christmas with this free countdown page.",
+    keyword: "days until Christmas",
+    category: "countdown",
+    mode: "daysUntil",
+    value: "2026-12-25",
+    related: [
+      { title: "How Many Days Until Christmas 2026?", href: "/how-many-days-until-christmas-2026" },
+      { title: "How Many Days Until Thanksgiving 2026?", href: "/how-many-days-until-thanksgiving-2026" },
+      { title: "Days Between Dates", href: "/days-between-dates" }
+    ],
+    faq: [
+      { question: "How many days until Christmas?", answer: "This page counts the number of days remaining until Christmas." },
+      { question: "Can I use this for holiday planning?", answer: "Yes. It is useful for gift planning, travel, meals, events, and seasonal reminders." },
+      { question: "Does the countdown update?", answer: "Yes. It updates when the page loads." },
+      { question: "Does this include Christmas 2026?", answer: "This page is currently configured for Christmas 2026." }
+    ],
+  }
+];
+
 export const TOOL_PAGES: ToolPageConfig[] = [
+  ...FIRST_TEN_SEO_PAGES,
   ...ADD_HOUR_VALUES.map(hourAddPage),
   ...ADD_MINUTE_VALUES.map(minuteAddPage),
   ...SUBTRACT_HOUR_VALUES.map(hourSubtractPage),
@@ -526,14 +670,3 @@ export const FEATURED_SLUGS = [
   "sleep-calculator",
 ];
 
-// --- Phase 3 injected pages ---
-export const EXTRA_PAGES = [
-  { slug: "what-time-will-it-be-in-2-hours-30-minutes", title: "What Time Will It Be in 2 Hours 30 Minutes?" },
-  { slug: "what-time-will-it-be-in-3-hours-15-minutes", title: "What Time Will It Be in 3 Hours 15 Minutes?" },
-  { slug: "what-time-will-it-be-in-1-hour-45-minutes", title: "What Time Will It Be in 1 Hour 45 Minutes?" },
-  { slug: "how-many-hours-between-9am-and-5pm", title: "How Many Hours Between 9AM and 5PM?" },
-  { slug: "how-many-hours-between-7am-and-3pm", title: "How Many Hours Between 7AM and 3PM?" },
-  { slug: "120-minutes-to-hours", title: "120 Minutes to Hours" },
-  { slug: "360-minutes-to-hours", title: "360 Minutes to Hours" },
-  { slug: "1000-seconds-to-minutes", title: "1000 Seconds to Minutes" }
-];

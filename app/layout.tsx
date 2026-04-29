@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://datetimecalchub.com"),
+  metadataBase: new URL("https://timecalchub.com"),
   title: { default: "TimeCalcHub", template: "%s | TimeCalcHub" },
   description: "Time and date calculators, countdown tools, work-hour tools, and sleep calculators built for fast answers.",
 };

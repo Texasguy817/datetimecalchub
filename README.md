@@ -50,3 +50,8 @@ Upload the project to GitHub, then import the repo into Vercel.
 - Related guides shown on tool pages
 - Expanded time and date page coverage
 - Broader shift, conversion, and date math support
+
+
+## First SEO page expansion added
+
+This package adds exact-match pages for minute-from-now, 9AM to 5PM hours, 120 minutes to hours, and days until Christmas. The hour-from-now pages already exist in the core dataset.

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ToolPageConfig } from "@/data/toolPages";
 
-const SITE_URL = "https://datetimecalchub.com";
+const SITE_URL = "https://timecalchub.com";
 const SITE_NAME = "TimeCalcHub";
 
 export function buildPageMetadata(config: ToolPageConfig): Metadata {
