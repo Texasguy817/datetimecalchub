@@ -60,3 +60,8 @@ This package adds exact-match pages for minute-from-now, 9AM to 5PM hours, 120 m
 ## Next 50 SEO pages added
 
 This package adds 50 additional SEO-targeted pages across minutes-from-now, hour-from-now, minutes-to-hours, and work-hour queries.
+
+
+## System-wide smart interlinking added
+
+Tool pages now automatically receive stronger related links based on page type and value, including minute clusters, hour clusters, conversion cross-links, calculator links, and homepage links.

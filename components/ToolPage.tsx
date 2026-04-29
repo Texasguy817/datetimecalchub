@@ -7,9 +7,73 @@ import AdPlaceholder from "@/components/AdPlaceholder";
 import InteractiveTool from "@/components/InteractiveTool";
 import { BLOG_POSTS } from "@/data/blogPosts";
 
+
+function slugToTitle(slug: string) {
+  return slug
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+function uniqueLinks(links: { title: string; href: string }[]) {
+  const seen = new Set<string>();
+  return links.filter((link) => {
+    if (seen.has(link.href)) return false;
+    seen.add(link.href);
+    return true;
+  });
+}
+
+function getSmartInternalLinks(config: any) {
+  const links: { title: string; href: string }[] = [
+    ...(config.related || []),
+  ];
+
+  const slug = String(config.slug || "");
+  const value = typeof config.value === "number" ? config.value : undefined;
+
+  if (slug.includes("minutes-from-now") && value) {
+    [value - 10, value + 10, value + 25].filter((v) => v > 0).forEach((v) => {
+      links.push({ title: `${v} Minutes From Now`, href: `/${v}-minutes-from-now` });
+    });
+
+    if (value >= 60 && value % 60 === 0) {
+      const hours = value / 60;
+      links.push({ title: `What Time Will It Be in ${hours} Hours?`, href: `/what-time-will-it-be-in-${hours}-hours` });
+      links.push({ title: `${value} Minutes to Hours`, href: `/${value}-minutes-to-hours` });
+    }
+  }
+
+  if (slug.includes("what-time-will-it-be-in") && value) {
+    [value - 1, value + 1, value + 2].filter((h) => h > 0).forEach((h) => {
+      links.push({ title: `What Time Will It Be in ${h} Hours?`, href: `/what-time-will-it-be-in-${h}-hours` });
+    });
+    links.push({ title: `${value * 60} Minutes From Now`, href: `/${value * 60}-minutes-from-now` });
+  }
+
+  if (slug.includes("minutes-to-hours") && value) {
+    links.push({ title: `${value} Minutes From Now`, href: `/${value}-minutes-from-now` });
+    if (value % 60 === 0) {
+      links.push({ title: `What Time Will It Be in ${value / 60} Hours?`, href: `/what-time-will-it-be-in-${value / 60}-hours` });
+    }
+  }
+
+  if (slug.includes("hours") || slug.includes("work")) {
+    links.push({ title: "Work Hours Calculator", href: "/work-hours-calculator" });
+    links.push({ title: "Time Duration Calculator", href: "/time-duration-calculator" });
+  }
+
+  links.push({ title: "TimeCalcHub Home", href: "/" });
+  links.push({ title: "Minutes to Hours Calculator", href: "/minutes-to-hours-calculator" });
+
+  return uniqueLinks(links).filter((link) => link.href !== `/${slug}`).slice(0, 8);
+}
+
+
 export default function ToolPage({ config }: { config: ToolPageConfig }) {
   const jsonLd = buildFaqJsonLd(config);
   const body = getBodyCopy(config);
+  const smartRelated = getSmartInternalLinks(config);
   const relatedGuides = BLOG_POSTS.filter((post) => post.category === config.category || post.relatedTools.some((tool) => tool.href === `/${config.slug}`)).slice(0, 3);
 
   return (
@@ -68,7 +132,7 @@ export default function ToolPage({ config }: { config: ToolPageConfig }) {
             </div>
           </section>
 
-          <RelatedTools related={config.related} />
+          <RelatedTools related={smartRelated} />
 
 
           {relatedGuides.length > 0 ? (
