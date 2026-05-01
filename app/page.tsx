@@ -23,6 +23,11 @@ export default function HomePage() {
         <section className="mx-auto max-w-6xl px-4 py-12 md:px-6">
           <p className="text-sm font-medium uppercase tracking-wide text-slate-500">Complete V1 launch build</p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-5xl">TimeCalcHub: Time, Date, Countdown, Work, and Sleep Tools</h1>
+<div style={{ textAlign: "center", margin: "20px auto", fontSize: "14px" }}>
+  Need student tools? Try{" "}
+  <a href="https://studentcalclab.com">StudentCalcLab</a>.
+</div>
+
         <div style={{ textAlign: "center", margin: "20px auto", fontSize: "14px" }}>
   Need student tools? Try{" "}
   <a href="https://studentcalclab.com">StudentCalcLab</a>.
