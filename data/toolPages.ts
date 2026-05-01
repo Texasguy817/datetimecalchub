@@ -3227,7 +3227,32 @@ value: 80,
 },
 ];
 
+
+const EXPANSION_100_PAGES: ToolPageConfig[] = Array.from({ length: 100 }, (_, i) => {
+  const value = i + 81;
+  return {
+    slug: `what-time-will-it-be-in-${value}-hours`,
+    title: `What Time Will It Be in ${value} Hours?`,
+    description: `Calculate what time it will be in ${value} hours from now with this free time calculator.`,
+    keyword: `what time will it be in ${value} hours`,
+    category: "time",
+    mode: "futureHours",
+    value,
+    related: [
+      { title: `Add ${value} Hours to Now`, href: `/add-${value}-hours-to-now` },
+      { title: `What Time Was It ${value} Hours Ago?`, href: `/what-time-was-it-${value}-hours-ago` },
+      { title: "Time Duration Calculator", href: "/time-duration-calculator" },
+    ],
+    faq: [
+      { question: `What time will it be in ${value} hours?`, answer: `This page adds ${value} hours to your current local time and shows the result instantly.` },
+      { question: "Does this work across days?", answer: "Yes. The calculator handles time changes across days automatically." },
+      { question: "Can I use this for planning?", answer: "Yes. It is useful for reminders, shifts, travel, meetings, and scheduling." },
+      { question: "Does the result update?", answer: "Yes. Reload the page to calculate again from the current time." },
+    ],
+  };
+});
 export const TOOL_PAGES = [
+  ...EXPANSION_100_PAGES,
   ...NEXT_FIFTY_SEO_PAGES,
   ...FIRST_TEN_SEO_PAGES,
   ...ADD_HOUR_VALUES.map(hourAddPage),

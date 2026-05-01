@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `https://timecalchub.com/blog/${post.slug}` },
+    alternates: { canonical: `https://datetimecalchub.com/blog/${post.slug}` },
   };
 }
 
