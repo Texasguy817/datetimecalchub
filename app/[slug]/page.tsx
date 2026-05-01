@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo";
 type PageProps = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  return TOOL_PAGES.map((tool) => ({ slug: tool.slug }));
+  return (TOOL_PAGES as { slug: string }[]).map((tool) => ({ slug: tool.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
