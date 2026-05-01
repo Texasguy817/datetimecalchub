@@ -99,6 +99,13 @@ export default function HomePage() {
             </div>
           </section>
         </section>
+     <div style={{ textAlign: "center", margin: "40px auto", fontSize: "14px" }}>
+  Need student tools? Try{" "}
+  <a href="https://studentcalclab.com">StudentCalcLab</a>.
+</div> 
+      
+      
+      
       </main>
     </>
   );
