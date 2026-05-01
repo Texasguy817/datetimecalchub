@@ -5,7 +5,7 @@ import { TOOL_PAGES, getToolBySlug } from "@/data/toolPages";
 import { buildPageMetadata } from "@/lib/seo";
 
 type PageProps = { params: Promise<{ slug: string }> };
-return (TOOL_PAGES as { slug: string }[]).find((item) => item.slug === slug)!;
+
 export async function generateStaticParams() {
   return (TOOL_PAGES as { slug: string }[]).map((tool) => ({ slug: tool.slug }));
 }

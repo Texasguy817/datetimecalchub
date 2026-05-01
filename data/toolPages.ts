@@ -3227,7 +3227,7 @@ value: 80,
 },
 ];
 
-export const TOOL_PAGES: [] = [
+export const TOOL_PAGES = [
   ...NEXT_FIFTY_SEO_PAGES,
   ...FIRST_TEN_SEO_PAGES,
   ...ADD_HOUR_VALUES.map(hourAddPage),
@@ -3244,7 +3244,7 @@ export const TOOL_PAGES: [] = [
   ...SPECIAL_COUNTDOWNS,
   ...buildDatePagesForYear(2026),
   ...buildDatePagesForYear(2027),
-];
+] as ToolPageConfig[];
 
 export function getToolBySlug(slug: string) {
   return TOOL_PAGES.find((tool) => tool.slug === slug);
