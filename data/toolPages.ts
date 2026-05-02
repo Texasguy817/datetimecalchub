@@ -3298,6 +3298,51 @@ const HOMEPAGE_ALIAS_PAGES: ToolPageConfig[] = [
     ],
     faq: numericFaq("What time is 10 hours from now?", "This page adds 10 hours to the current local time and shows the result instantly."),
   },
+  {
+    slug: "30-minutes-from-now",
+    title: "30 Minutes From Now",
+    description: "Find out what time it will be 30 minutes from now with this quick time calculator.",
+    keyword: "30 minutes from now",
+    category: "time",
+    mode: "futureMinutes",
+    value: 30,
+    related: [
+      { title: "60 Minutes From Now", href: "/60-minutes-from-now" },
+      { title: "1 Hour From Now", href: "/1-hours-from-now" },
+      { title: "5 Hours From Now", href: "/5-hours-from-now" },
+    ],
+    faq: numericFaq("What time is 30 minutes from now?", "This page adds 30 minutes to the current local time and shows the result instantly."),
+  },
+  {
+    slug: "60-minutes-from-now",
+    title: "60 Minutes From Now",
+    description: "Find out what time it will be 60 minutes from now with this quick time calculator.",
+    keyword: "60 minutes from now",
+    category: "time",
+    mode: "futureMinutes",
+    value: 60,
+    related: [
+      { title: "30 Minutes From Now", href: "/30-minutes-from-now" },
+      { title: "1 Hour From Now", href: "/1-hours-from-now" },
+      { title: "10 Hours From Now", href: "/10-hours-from-now" },
+    ],
+    faq: numericFaq("What time is 60 minutes from now?", "This page adds 60 minutes to the current local time and shows the result instantly."),
+  },
+  {
+    slug: "10-days-from-now",
+    title: "10 Days From Now",
+    description: "Find the date 10 days from now with this quick date calculator.",
+    keyword: "10 days from now",
+    category: "date",
+    mode: "addDays",
+    value: 10,
+    related: [
+      { title: "Days Between Dates", href: "/days-between-dates" },
+      { title: "Add 30 Days to a Date", href: "/add-30-days-to-date" },
+      { title: "30 Minutes From Now", href: "/30-minutes-from-now" },
+    ],
+    faq: numericFaq("What date is 10 days from now?", "This page adds 10 days to today's date and shows the result instantly."),
+  },
 ];
 
 export const TOOL_PAGES = [
