@@ -57,12 +57,12 @@ export default function HomePage() {
             <h2 className="text-2xl font-bold">Popular Time Calculators</h2>
             <p className="mt-2 text-sm text-slate-600">Start with these commonly used time and date tools.</p>
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              <Link className="rounded-2xl border border-slate-200 p-4 hover:bg-slate-50" href="/what-time-will-it-be-in-1-hour">What Time Will It Be in 1 Hour?</Link>
-              <Link className="rounded-2xl border border-slate-200 p-4 hover:bg-slate-50" href="/what-time-will-it-be-in-5-hours">What Time Will It Be in 5 Hours?</Link>
-              <Link className="rounded-2xl border border-slate-200 p-4 hover:bg-slate-50" href="/what-time-will-it-be-in-10-hours">What Time Will It Be in 10 Hours?</Link>
+              <Link className="rounded-2xl border border-slate-200 p-4 hover:bg-slate-50" href="/1-hours-from-now">1 Hour From Now</Link>
+              <Link className="rounded-2xl border border-slate-200 p-4 hover:bg-slate-50" href="/5-hours-from-now">5 Hours From Now</Link>
+              <Link className="rounded-2xl border border-slate-200 p-4 hover:bg-slate-50" href="/10-hours-from-now">10 Hours From Now</Link>
               <Link className="rounded-2xl border border-slate-200 p-4 hover:bg-slate-50" href="/30-minutes-from-now">30 Minutes From Now</Link>
               <Link className="rounded-2xl border border-slate-200 p-4 hover:bg-slate-50" href="/60-minutes-from-now">60 Minutes From Now</Link>
-              <Link className="rounded-2xl border border-slate-200 p-4 hover:bg-slate-50" href="/add-10-days-to-date">Add 10 Days to a Date</Link>
+              <Link className="rounded-2xl border border-slate-200 p-4 hover:bg-slate-50" href="/10-days-from-now">10 Days From Now</Link>
             </div>
           </section>
 

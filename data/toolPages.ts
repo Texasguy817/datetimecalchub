@@ -3251,7 +3251,57 @@ const EXPANSION_100_PAGES: ToolPageConfig[] = Array.from({ length: 100 }, (_, i)
     ],
   };
 });
+
+const HOMEPAGE_ALIAS_PAGES: ToolPageConfig[] = [
+  {
+    slug: "1-hours-from-now",
+    title: "1 Hour From Now",
+    description: "Find out what time it will be 1 hour from now with this quick time calculator.",
+    keyword: "1 hour from now",
+    category: "time",
+    mode: "futureHours",
+    value: 1,
+    related: [
+      { title: "5 Hours From Now", href: "/5-hours-from-now" },
+      { title: "10 Hours From Now", href: "/10-hours-from-now" },
+      { title: "30 Minutes From Now", href: "/30-minutes-from-now" },
+    ],
+    faq: numericFaq("What time is 1 hour from now?", "This page adds 1 hour to the current local time and shows the result instantly."),
+  },
+  {
+    slug: "5-hours-from-now",
+    title: "5 Hours From Now",
+    description: "Find out what time it will be 5 hours from now with this quick time calculator.",
+    keyword: "5 hours from now",
+    category: "time",
+    mode: "futureHours",
+    value: 5,
+    related: [
+      { title: "1 Hour From Now", href: "/1-hours-from-now" },
+      { title: "10 Hours From Now", href: "/10-hours-from-now" },
+      { title: "60 Minutes From Now", href: "/60-minutes-from-now" },
+    ],
+    faq: numericFaq("What time is 5 hours from now?", "This page adds 5 hours to the current local time and shows the result instantly."),
+  },
+  {
+    slug: "10-hours-from-now",
+    title: "10 Hours From Now",
+    description: "Find out what time it will be 10 hours from now with this quick time calculator.",
+    keyword: "10 hours from now",
+    category: "time",
+    mode: "futureHours",
+    value: 10,
+    related: [
+      { title: "1 Hour From Now", href: "/1-hours-from-now" },
+      { title: "5 Hours From Now", href: "/5-hours-from-now" },
+      { title: "60 Minutes From Now", href: "/60-minutes-from-now" },
+    ],
+    faq: numericFaq("What time is 10 hours from now?", "This page adds 10 hours to the current local time and shows the result instantly."),
+  },
+];
+
 export const TOOL_PAGES = [
+  ...HOMEPAGE_ALIAS_PAGES,
   ...EXPANSION_100_PAGES,
   ...NEXT_FIFTY_SEO_PAGES,
   ...FIRST_TEN_SEO_PAGES,
